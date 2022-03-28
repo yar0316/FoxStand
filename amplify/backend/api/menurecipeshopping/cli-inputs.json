@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "menurecipeshopping",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\yutar\\workspace\\menues_recipes_shopping\\amplify\\backend\\api\\menurecipeshopping\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
