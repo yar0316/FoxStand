@@ -1,19 +1,12 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
-import MenuList from '@/views/MenuManagement/MenuList.vue'
-import MenuAdd from '@/views/MenuManagement/MenuAdd.vue'
-import RecipeAdd from '@/views/Recipe/RecipeAdd.vue'
-import RecipeList from '@/views/Recipe/RecipeList.vue'
-import ShoppingList from '@/views/Shopping/ShoppingList.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect:'/menulist'
   },
   {
     path: '/about',
@@ -26,27 +19,27 @@ const routes: Array<RouteConfig> = [
   {
     path: '/menulist',
     name: 'MenuList',
-    component: MenuList
+    component: () => import(/* webpackChunkName: "menulist" */ '../views/MenuManagement/MenuList.vue')
   },
   {
-    path: '/menuAdd',
+    path: '/menuadd',
     name: 'MenuAdd',
-    component: MenuAdd
+    component: () => import(/* webpackChunkName: "menuadd" */ '../views/MenuManagement/MenuAdd.vue')
   },
   {
     path: '/recipeadd',
     name: 'RecipeAdd',
-    component: RecipeAdd
+    component: () => import(/* webpackChunkName: "recipeadd" */ '../views/Recipe/RecipeAdd.vue')
   },
   {
     path: '/recipelist',
     name: 'RecipeList',
-    component: RecipeList
+    component: () => import(/* webpackChunkName: "recipelist" */ '../views/Recipe/RecipeList.vue')
   },
   {
     path: '/shoppinglist',
     name: 'ShoppingList',
-    component: ShoppingList
+    component: () => import(/* webpackChunkName: "ShoppingList" */ '../views/Shopping/ShoppingList.vue')
   },
 ]
 
