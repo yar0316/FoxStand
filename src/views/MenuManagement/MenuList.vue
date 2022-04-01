@@ -1,12 +1,6 @@
 <template>
-    <h1>献立管理画面</h1>
+    <div class="menulist">
+        <h1>献立管理画面</h1>
+        <h2>これは献立管理画面です</h2>
+    </div>
 </template>
-
-<script lang="ts">
-import { Vue } from 'vue-property-decorator';
-
-
-export default class MenuManagement extends Vue {
-
-}
-</script>
